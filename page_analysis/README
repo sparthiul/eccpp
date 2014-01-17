@@ -1,0 +1,6 @@
+page_analysis package is not finished yet!!
+
+Notes:
+1. all the .cpp files are python dependent;
+2. pa_dom_common.h, pa_dom_node_visitor.h, pa_page_analysis_facade.h, pa_page_analysis_factory.h are platform independent interfaces;
+3. pa_python_wrapper.h, pa_server_dom_node_visitor.h, pa_server_page_analysis_factory.h are python dependent;

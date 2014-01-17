@@ -1,0 +1,22 @@
+*****************************************************basics package******************************************************************************
+
+Supported utilities:
+ec_log.h: simple logger
+ec_config.h: simple configuration, supports cache
+ec_regex.h: simple regex
+ec_utils.h: supports string, URL, fileIO utils
+
+ec_linear_classifier.h: simple linear classifier
+ec_boolean_classifier.h: boolean classifier, supports A >= 1 && B < 2 || C == 1 && !D==2
+ec_svm_classifier.h: wrappers libsvm
+
+Notes: src codes just depend on STL except ec_Linux dependent regex.h/.cpp
+0. almost all the source code are written by myself, except some minor updates;
+1. ec_log.cpp has ANDRIOD specific code, it's not thread safe;
+2. ec_svm.h/.cpp is copied from third party libsvm, extended by switch  __SVM_EXTENSION_ENABLED__, which ec_svm_classifier.cpp depends on;
+3. json/ is copied from third party, I never used yet, while used by others, their header files are not in inc/ folders;
+4. ec_regex.h/.cpp just support Linux platform;
+5. unit test depends on gtest-1.6.0+;
+6. ec_log.h, ec_iconfig.h, ec_iregex.h are pure interfaces, can be implemented for different platforms;
+
+
